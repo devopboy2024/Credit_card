@@ -1,0 +1,125 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    animation: float 4s infinite ease-in-out;
+}
+
+h1, h2 {
+    color: #f1c40f;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+button {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(231, 76, 60, 0.5);
+}
+
+form {
+    text-align: left;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.fraud {
+    color: #ff3b3b;
+    background: rgba(255, 59, 59, 0.2);
+    border: 2px solid #ff3b3b;
+    animation: pulse 1s infinite alternate;
+}
+
+.legitimate {
+    color: darkgreen;
+    background: rgba(39, 174, 96, 0.2);
+    border: 2px solid #27ae60;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
